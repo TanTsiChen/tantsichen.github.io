@@ -1,0 +1,34 @@
+<svg role="img" aria-labelledby="title description" xmlns="http://www.w3.org/2000/svg" width="1000" height="560" viewBox="0 0 1000 560"><title id="title">Keywords from my publications</title><desc id="description">Editorially selected scientific phrases; automatic document-frequency counts from arXiv titles and abstracts. Each paper counts once per phrase. No weighting by citations, recency, or project membership. Entanglement: 11 papers; Conformal field theory: 7 papers; Quantum criticality: 7 papers; Free fermions: 6 papers; Conformal interfaces: 4 papers; Entanglement entropy: 4 papers; Mutual information: 4 papers; Quantum quenches: 4 papers; Central charge: 4 papers; Projective measurements: 3 papers; Entanglement spectra: 3 papers; Open quantum systems: 3 papers; Non-Hermiticity: 3 papers; Non-unitarity: 3 papers; Dissipation: 3 papers; Many-body localization: 2 papers; Complex CFTs: 2 papers; Entanglement Hamiltonians: 1 paper; Electron–phonon coupling: 1 paper; Matrix product states: 1 paper; Boundary criticality: 1 paper; Quantum engineering: 1 paper; Monitored dynamics: 1 paper; Quenched disorder: 1 paper; Symmetry breaking: 1 paper; Weak measurement: 1 paper; Gaussian states: 1 paper; String order: 1 paper; AI agents: 1 paper; OTOCs: 1 paper; MIPT: 1 paper</desc>
+<style>text{font-family:'Arial';font-weight:normal;font-style:normal;}</style>
+<text transform="translate(440,511)" font-size="60" style="fill:#775580">Entanglement</text>
+<text transform="translate(202,409)" font-size="56" style="fill:#936329">Conformal field theory</text>
+<text transform="translate(22,338)" font-size="56" style="fill:#6e6672">Quantum criticality</text>
+<text transform="translate(192,51)" font-size="54" style="fill:#775580">Free fermions</text>
+<text transform="translate(421,211)" font-size="50" style="fill:#936329">Conformal interfaces</text>
+<text transform="translate(49,124)" font-size="50" style="fill:#63734d">Entanglement entropy</text>
+<text transform="translate(531,337)" font-size="50" style="fill:#6e6672">Mutual information</text>
+<text transform="translate(284,268)" font-size="50" style="fill:#6e6672">Quantum quenches</text>
+<text transform="translate(83,493)" font-size="50" style="fill:#98636f">Central charge</text>
+<text transform="translate(541,50)" font-size="40" style="fill:#98636f">Projective measurements</text>
+<text transform="translate(23,174)" font-size="40" style="fill:#936329">Entanglement spectra</text>
+<text transform="translate(550,94)" font-size="40" style="fill:#63734d">Open quantum systems</text>
+<text transform="translate(717,139)" font-size="40" style="fill:#63734d">Non-Hermiticity</text>
+<text transform="translate(72,543)" font-size="40" style="fill:#775580">Non-unitarity</text>
+<text transform="translate(355,450)" font-size="40" style="fill:#6e6672">Dissipation</text>
+<text transform="translate(607,453)" font-size="37" style="fill:#936329">Many-body localization</text>
+<text transform="translate(740,284)" font-size="37" style="fill:#936329">Complex CFTs</text>
+<text transform="translate(14,216)" font-size="33" style="fill:#63734d">Entanglement Hamiltonians</text>
+<text transform="translate(632,543)" font-size="31" style="fill:#6e6672">Electron–phonon coupling</text>
+<text transform="translate(7,442)" font-size="31" style="fill:#63734d">Matrix product states</text>
+<text transform="translate(13,262)" font-size="31" style="fill:#98636f">Boundary criticality</text>
+<text transform="translate(636,365)" font-size="31" style="fill:#63734d">Quantum engineering</text>
+<text transform="translate(310,545)" font-size="31" style="fill:#98636f">Monitored dynamics</text>
+<text transform="translate(727,240)" font-size="31" style="fill:#775580">Quenched disorder</text>
+<text transform="translate(461,161)" font-size="29" style="fill:#936329">Symmetry breaking</text>
+<text transform="translate(159,79)" font-size="29" style="fill:#6e6672">Weak measurement</text>
+<text transform="translate(763,409)" font-size="29" style="fill:#6e6672">Gaussian states</text>
+<text transform="translate(833,483)" font-size="29" style="fill:#98636f">String order</text>
+<text transform="translate(811,170)" font-size="29" style="fill:#63734d">AI agents</text>
+<text transform="translate(38,385)" font-size="29" style="fill:#6e6672">OTOCs</text>
+<text transform="translate(14,30)" font-size="29" style="fill:#6e6672">MIPT</text>
+</svg>

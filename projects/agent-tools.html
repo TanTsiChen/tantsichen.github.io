@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#fcfcfd" />
+    <meta name="description" content="Software for reliable tool use by AI agents, from data exchange to execution and verification." />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Agent tools &amp; infrastructure — Qicheng Tang" />
+    <meta property="og:description" content="Software for reliable tool use by AI agents, from data exchange to execution and verification." />
+    <title>Agent tools &amp; infrastructure — Qicheng Tang</title>
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script src="../script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="site-name" href="../index.html">Qicheng Tang</a>
+        <nav class="site-navigation" aria-label="Main navigation">
+          <a href="../index.html">Home</a>
+          <a href="../projects/index.html" aria-current="page">Projects</a>
+          <a href="../publications.html">Publications</a>
+          <a href="../cv.html">CV</a>
+        </nav>
+      </div>
+    </header>
+    <main class="container page" id="main" tabindex="-1">
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="./index.html">All projects</a></nav>
+      <header class="page-heading project-heading">
+        <h1>Agent tools &amp; infrastructure</h1>
+        <p class="project-introduction">AI agents rely on software to turn model outputs into actions and bring tool results back into context. I develop tools and infrastructure for making these interactions explicit and reliable, with attention to data representation, execution, and verification. The projects here address practical problems in agent workflows and are released as reusable software.</p>
+      </header>
+
+      <section class="project-software" aria-labelledby="project-software-title">
+        <h2 id="project-software-title">Selected tools</h2>
+        <ul class="software-list">
+          <li class="software-entry" id="software-dsh-exact-integers">
+            <h3><a href="https://github.com/TanTsiChen/dsh-exact-integers" target="_blank" rel="noopener noreferrer">DSH Exact Integers</a></h3>
+            <p class="software-meta">TypeScript · MIT</p>
+            <p class="software-description">An opt-in plugin for DeepSeek Harness that preserves arbitrary-precision integers in tool arguments and results. Tool code works with JavaScript bigint, while explicitly declared fields use decimal strings when exchanged with the agent or stored in sessions. The package provides validation and native JSON adapters, with tests covering tool execution, persistence, replay, and cancellation.</p>
+            <div class="software-links"><a href="https://github.com/TanTsiChen/dsh-exact-integers" target="_blank" rel="noopener noreferrer" aria-label="GitHub repository: DSH Exact Integers">GitHub</a></div>
+          </li>
+        </ul>
+      </section>
+      <section class="related-projects" aria-labelledby="related-projects">
+        <h2 id="related-projects">Related projects</h2>
+        <ul><li><a href="./automata-for-physics.html">Automata for Physics</a></li></ul>
+      </section>
+    </main>
+    <footer class="site-footer container"><p>© <span id="copyright-year">2026</span> Qicheng Tang</p></footer>
+  </body>
+</html>

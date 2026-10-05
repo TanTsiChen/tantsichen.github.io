@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#fcfcfd" />
+    <meta name="description" content="Numerical approaches to model systems and materials, using exact diagonalization, tensor networks, and density-functional theory." />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Numerics for quantum many-body systems — Qicheng Tang" />
+    <meta property="og:description" content="Numerical approaches to model systems and materials, using exact diagonalization, tensor networks, and density-functional theory." />
+    <title>Numerics for quantum many-body systems — Qicheng Tang</title>
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script src="../script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="site-name" href="../index.html">Qicheng Tang</a>
+        <nav class="site-navigation" aria-label="Main navigation">
+          <a href="../index.html">Home</a>
+          <a href="../projects/index.html" aria-current="page">Projects</a>
+          <a href="../publications.html">Publications</a>
+          <a href="../cv.html">CV</a>
+        </nav>
+      </div>
+    </header>
+    <main class="container page" id="main" tabindex="-1">
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="./index.html">All projects</a></nav>
+      <header class="page-heading project-heading">
+        <h1>Numerics for quantum many-body systems</h1>
+        <p class="project-introduction">I develop and apply numerical methods to study quantum many-body systems, from model Hamiltonians to electronic structure in materials. Exact diagonalization, tensor networks, and density-functional theory provide complementary access to spectra, correlations, entanglement, dynamics, and transport. Benchmarks, symmetry, and convergence checks help establish which physical conclusions remain reliable as numerical approximations are varied.</p>
+      </header>
+
+      <section class="project-method" aria-labelledby="method-exact-diagonalization">
+        <h2 id="method-exact-diagonalization">Exact diagonalization</h2>
+        <p class="method-description">Exact diagonalization gives direct access to eigenstates, spectra, and time evolution of finite quantum systems. Symmetry sectors and sparse Krylov methods extend the accessible sizes and provide benchmarks for approximate approaches. For free fermions, quadratic structure offers a complementary route: single-particle correlation matrices encode Gaussian states and determine subsystem entanglement without constructing the full many-body wavefunction.</p>
+
+        <h3 class="method-reference-heading">References</h3>
+        <ul class="method-references">
+          <li><cite><a href="https://www.cond-mat.de/events/correl19/manuscripts/koch.pdf" target="_blank" rel="noopener noreferrer">Exact Diagonalization and Lanczos Method</a></cite><span class="method-reference-meta">Erik Koch · Many-Body Methods for Real Materials, Modeling and Simulation 9, Chapter 7 (2019)</span></li>
+          <li><cite><a href="https://arxiv.org/abs/cond-mat/0212631" target="_blank" rel="noopener noreferrer">Calculation of reduced density matrices from correlation functions</a></cite><span class="method-reference-meta">Ingo Peschel · Journal of Physics A: Mathematical and General 36, L205–L208 (2003)</span></li>
+        </ul>
+      </section>
+      <section class="project-method" aria-labelledby="method-dmrg">
+        <h2 id="method-dmrg">Density-matrix renormalization group (DMRG)</h2>
+        <p class="method-description">DMRG variationally optimizes a matrix product state to approximate the ground state of a quantum many-body system. Exploiting entanglement structure makes large one-dimensional systems and finite-width cylinders accessible, with accuracy controlled through bond dimension and convergence checks. The same MPS framework supports time evolution and correlation functions, connecting ground-state calculations with nonequilibrium dynamics and spectral response.</p>
+        <figure class="method-figure">
+          <a class="method-figure-link" href="../assets/projects/numerics-mps-canonical.svg" target="_blank" rel="noopener noreferrer" aria-label="Enlarge: Matrix product states"><img class="method-visual project-visual-paper" src="../assets/projects/numerics-mps-canonical.svg" alt="MPS decomposition from Fig. 3(a), followed by the mixed canonical form and its left and right Schmidt blocks from Fig. 4(c) of Hauschild and Pollmann (2018)." width="1000" height="375" loading="lazy" decoding="async" /></a>
+          <figcaption><p><strong>Matrix product states.</strong> Local tensors encode the wavefunction; the canonical form exposes Schmidt values and orthonormal blocks.</p><div class="method-figure-actions"><details class="figure-credit">
+              <summary>Figure sources</summary>
+              <p><strong>Figs. 3(a) and 4(c).</strong> Johannes Hauschild and Frank Pollmann. <cite><a href="https://doi.org/10.21468/SciPostPhysLectNotes.5">Efficient numerical simulations with Tensor Networks: Tensor Network Python (TeNPy)</a></cite>. SciPost Physics Lecture Notes 5 (2018). Used under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Selected panels cropped from the original vector PDFs and arranged vertically. Original notation retained; lettering converted to SVG paths.</p>
+            </details><a href="../assets/projects/numerics-mps-canonical.svg" target="_blank" rel="noopener noreferrer" aria-label="Enlarge: Matrix product states">Enlarge figure</a></div></figcaption>
+        </figure>
+        <figure class="method-figure">
+          <a class="method-figure-link" href="../assets/projects/numerics-dmrg-update.svg" target="_blank" rel="noopener noreferrer" aria-label="Enlarge: Two-site DMRG"><img class="method-visual project-visual-paper" src="../assets/projects/numerics-dmrg-update.svg" alt="The effective Hamiltonian and two-site DMRG update from Fig. 8(b–c) of Hauschild and Pollmann (2018), including local optimization and the SVD step." width="402" height="202" loading="lazy" decoding="async" /></a>
+          <figcaption><p><strong>Two-site DMRG.</strong> An effective Hamiltonian optimizes neighboring tensors, which are split by an SVD before the sweep continues.</p><div class="method-figure-actions"><details class="figure-credit">
+              <summary>Figure sources</summary>
+              <p><strong>Fig. 8(b–c).</strong> Johannes Hauschild and Frank Pollmann. <cite><a href="https://doi.org/10.21468/SciPostPhysLectNotes.5">Efficient numerical simulations with Tensor Networks: Tensor Network Python (TeNPy)</a></cite>. SciPost Physics Lecture Notes 5 (2018). Used under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Panels cropped from the original vector PDF. Diagram, arrows, and notation retained; lettering converted to SVG paths.</p>
+            </details><a href="../assets/projects/numerics-dmrg-update.svg" target="_blank" rel="noopener noreferrer" aria-label="Enlarge: Two-site DMRG">Enlarge figure</a></div></figcaption>
+        </figure>
+        <p class="method-resources"><span>Software</span><a href="https://tenpy.readthedocs.io/en/latest/" target="_blank" rel="noopener noreferrer">TeNPy</a><a href="https://github.com/tenpy/tenpy" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+        <h3 class="method-reference-heading">References</h3>
+        <ul class="method-references">
+          <li><cite><a href="https://arxiv.org/abs/1008.3477" target="_blank" rel="noopener noreferrer">The density-matrix renormalization group in the age of matrix product states</a></cite><span class="method-reference-meta">Ulrich Schollwöck · Annals of Physics 326, 96–192 (2011)</span></li>
+          <li><cite><a href="https://arxiv.org/abs/1805.00055" target="_blank" rel="noopener noreferrer">Efficient numerical simulations with Tensor Networks: Tensor Network Python (TeNPy)</a></cite><span class="method-reference-meta">Johannes Hauschild and Frank Pollmann · SciPost Physics Lecture Notes 5 (2018)</span></li>
+          <li><cite><a href="https://doi.org/10.21468/SciPostPhysCodeb.41" target="_blank" rel="noopener noreferrer">Tensor network Python (TeNPy) version 1</a></cite><span class="method-reference-meta">Johannes Hauschild et al. · SciPost Physics Codebases 41 (2024)</span></li>
+        </ul>
+      </section>
+      <section class="project-method" aria-labelledby="method-isometric-tensor-networks">
+        <h2 id="method-isometric-tensor-networks">Isometric tensor-network states</h2>
+        <p class="method-description">Isometric tensor-network states (isoTNS) extend the canonical structure of MPS to two-dimensional networks. Isometry constraints simplify contractions, while Moses moves shift the orthogonality column to enable local updates. Ground-state optimization and TEBD² time evolution give access to correlations and dynamical structure factors. Exact representations of string-net states also connect isoTNS to long-range entanglement and topological order.</p>
+        <figure class="method-figure">
+          <a class="method-figure-link" href="../assets/projects/numerics-isotns-network.svg" target="_blank" rel="noopener noreferrer" aria-label="Enlarge: Isometric PEPS"><img class="method-visual project-visual-paper" src="../assets/projects/numerics-isotns-network.svg" alt="Two-dimensional isoTNS diagrams from Fig. 2(e–f) of Lin, Zaletel, and Pollmann (2022). The highlighted orthogonality column is shown without and with physical indices." width="1000" height="480" loading="lazy" decoding="async" /></a>
+          <figcaption><p><strong>Isometric PEPS.</strong> A two-dimensional network with an orthogonality column between sites or on a column of physical sites.</p><div class="method-figure-actions"><details class="figure-credit">
+              <summary>Figure sources</summary>
+              <p><strong>Fig. 2(e–f).</strong> Sheng-Hsuan Lin, Michael P. Zaletel, and Frank Pollmann. <cite><a href="https://doi.org/10.1103/PhysRevB.106.245102">Efficient Simulation of Dynamics in Two-Dimensional Quantum Spin Systems with Isometric Tensor Networks</a></cite>. Physical Review B 106, 245102 (2022). Used under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Selected panels retained from the original vector PDF, arranged side by side. Original notation retained; lettering converted to SVG paths.</p>
+            </details><a href="../assets/projects/numerics-isotns-network.svg" target="_blank" rel="noopener noreferrer" aria-label="Enlarge: Isometric PEPS">Enlarge figure</a></div></figcaption>
+        </figure>
+        <figure class="method-figure">
+          <a class="method-figure-link" href="../assets/projects/numerics-moses-move.svg" target="_blank" rel="noopener noreferrer" aria-label="Enlarge: Moses move"><img class="method-visual project-visual-paper" src="../assets/projects/numerics-moses-move.svg" alt="The Moses move and subsequent compression in Fig. 3 of Lin, Zaletel, and Pollmann (2022). Panels (a), (b), and (c) show the initial column, its factorization, and the shifted orthogonality column." width="1000" height="420" loading="lazy" decoding="async" /></a>
+          <figcaption><p><strong>Moses move.</strong> Splitting a column and recompressing it with its neighbor shifts the orthogonality column across the network.</p><div class="method-figure-actions"><details class="figure-credit">
+              <summary>Figure sources</summary>
+              <p><strong>Fig. 3.</strong> Sheng-Hsuan Lin, Michael P. Zaletel, and Frank Pollmann. <cite><a href="https://doi.org/10.1103/PhysRevB.106.245102">Efficient Simulation of Dynamics in Two-Dimensional Quantum Spin Systems with Isometric Tensor Networks</a></cite>. Physical Review B 106, 245102 (2022). Used under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Original vector panels arranged horizontally. Original notation retained; lettering converted to SVG paths.</p>
+            </details><a href="../assets/projects/numerics-moses-move.svg" target="_blank" rel="noopener noreferrer" aria-label="Enlarge: Moses move">Enlarge figure</a></div></figcaption>
+        </figure>
+        <h3 class="method-reference-heading">References</h3>
+        <ul class="method-references">
+          <li><cite><a href="https://arxiv.org/abs/1902.05100" target="_blank" rel="noopener noreferrer">Isometric Tensor Network States in Two Dimensions</a></cite><span class="method-reference-meta">Michael P. Zaletel and Frank Pollmann · Physical Review Letters 124, 037201 (2020)</span></li>
+          <li><cite><a href="https://arxiv.org/abs/2112.08394" target="_blank" rel="noopener noreferrer">Efficient Simulation of Dynamics in Two-Dimensional Quantum Spin Systems with Isometric Tensor Networks</a></cite><span class="method-reference-meta">Sheng-Hsuan Lin, Michael P. Zaletel, and Frank Pollmann · Physical Review B 106, 245102 (2022)</span></li>
+          <li><cite><a href="https://arxiv.org/abs/1908.07545" target="_blank" rel="noopener noreferrer">Isometric Tensor Network representation of string-net liquids</a></cite><span class="method-reference-meta">Tomohiro Soejima, Karthik Siva, Nick Bultinck, Shubhayu Chatterjee, Frank Pollmann, and Michael P. Zaletel · Physical Review B 101, 085117 (2020)</span></li>
+        </ul>
+      </section>
+      <section class="project-method" aria-labelledby="method-density-functional-theory">
+        <h2 id="method-density-functional-theory">Density-functional theory (DFT)</h2>
+        <p class="method-description">Density-functional theory provides a practical route to the electronic structure of materials from their atomic composition and geometry. Combined with lattice-dynamical and electron–phonon calculations, it connects microscopic structure to vibrational stability, scattering, and transport.</p>
+        <ul class="publication-list">
+<li class="publication" id="paper-tang-2019-zirconium" data-status="journal">
+            <h3><a href="https://doi.org/10.1103/PhysRevB.99.205152" target="_blank" rel="noopener noreferrer">Influence of hydrogen on electron-phonon coupling and intrinsic electrical resistivity in zirconium: A first-principles study</a></h3>
+            <p class="authors"><strong>Qicheng Tang</strong>, L. A. Svyatkin, I. P. Chernov</p>
+            <p class="publication-venue">Physical Review B 99, 205152 (2019)</p>
+            <p class="paper-description">Using first-principles electronic-structure and lattice-dynamical calculations, we study electron–phonon coupling and intrinsic electrical resistivity across zirconium hydrides. We relate the anomalous resistivity decrease at high hydrogen concentration to the cubic-to-tetragonal structural transition. The distortion removes unstable phonon modes and weakens electron–phonon scattering, connecting changes in crystal symmetry to transport.</p>
+            <div class="paper-links"><a href="https://doi.org/10.1103/PhysRevB.99.205152" target="_blank" rel="noopener noreferrer" aria-label="Journal article: Influence of hydrogen on electron-phonon coupling and intrinsic electrical resistivity in zirconium: A first-principles study">Journal</a> <a href="https://arxiv.org/abs/1806.00847" target="_blank" rel="noopener noreferrer" aria-label="arXiv abstract: Influence of hydrogen on electron-phonon coupling and intrinsic electrical resistivity in zirconium: A first-principles study">arXiv</a></div>
+          </li>
+        </ul>
+
+
+      </section>
+      <section class="related-projects" aria-labelledby="related-projects">
+        <h2 id="related-projects">Related projects</h2>
+        <ul><li><a href="./universal-entanglement.html">Entanglement spectra &amp; Hamiltonians at criticality</a></li><li><a href="./disordered-criticality.html">Randomness &amp; quantum criticality</a></li><li><a href="./non-unitary-criticality.html">Monitored dynamics &amp; emergent phases</a></li></ul>
+      </section>
+    </main>
+    <footer class="site-footer container"><p>© <span id="copyright-year">2026</span> Qicheng Tang</p></footer>
+  </body>
+</html>
